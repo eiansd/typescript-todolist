@@ -25,6 +25,9 @@ function Input({
             isDone: false,
           };
           setTodos([...todos, newTodo]);
+
+          setTitle("");
+          setContents("");
         }}
       >
         <StInput
@@ -41,15 +44,7 @@ function Input({
             setContents(e.target.value);
           }}
         ></StInput>
-        <StButton
-          type="submit"
-          onClick={() => {
-            setTitle("");
-            setContents("");
-          }}
-        >
-          추가하기
-        </StButton>
+        <StButton type="submit">추가하기</StButton>
       </form>
     </div>
   );
