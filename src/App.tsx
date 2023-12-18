@@ -41,7 +41,7 @@ function App() {
   ]);
 
   return (
-    <>
+    <StWrap>
       <StHeader> My Todo List</StHeader>
       <StMain>
         <div>
@@ -52,18 +52,23 @@ function App() {
           <Todolist todos={todos} setTodos={setTodos} listIsDone={true} />
         </div>
       </StMain>
-    </>
+    </StWrap>
   );
 }
 
 export default App;
 
+const StWrap = styled.div`
+  max-width: 1200px;
+  min-width: 800px;
+  margin: auto;
+`;
 const StHeader = styled.div`
   background-color: #edf5ae;
   padding: 10px;
   font-weight: bolder;
 `;
 const StMain = styled.div`
-  background-color: #88b1ab;
+  background-color: #f1ebeb;
   padding: 10px;
 `;

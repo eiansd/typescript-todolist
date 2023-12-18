@@ -28,18 +28,20 @@ function Input({
         }}
       >
         <StInput
+          placeholder="제목을 입력해주세요"
           value={title}
           onChange={(e) => {
             setTitle(e.target.value);
           }}
         ></StInput>
         <StInput
+          placeholder="내용을 입력해주세요"
           value={contents}
           onChange={(e) => {
             setContents(e.target.value);
           }}
         ></StInput>
-        <StButton type="submit"> 입력</StButton>
+        <StButton type="submit"> 추가하기</StButton>
       </form>
     </div>
   );
@@ -48,10 +50,18 @@ function Input({
 const StInput = styled.input`
   margin-right: 5px;
   padding: 5px;
+  outline: none;
 `;
 
 const StButton = styled.button`
   padding: 3.5px;
   cursor: pointer;
+  float: right;
+  padding: 7px 20px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: #16ac16;
+  font-weight: bold;
+  color: white;
 `;
 export default Input;
